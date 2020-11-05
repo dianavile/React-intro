@@ -7,13 +7,15 @@ Learn the Core principles of REACT.
 - corebuilding block for making reusable pieces of HTML.
 
 2. JSX:
-- React prioritary wrapper among Javascript, to let you build components in a familiar way,
-  using the HTML syntax.
+- React prioritary wrapper among Javascript, to build components in a familiar way, using the HTML syntax.
 
 3. Styling components:
+- ClassName or Inline styling.
+
 4. Data handling: State & Props:
-- STATE: to maintain and change data
-- PROPS: to pass data around an Application
+- STATE: to maintain and change data.
+- PROPS: to pass data around an Application.
+(=to allow properties to modify the way the component acts).
 
 5. Event handling:
 - To have strong interactivity with your users
