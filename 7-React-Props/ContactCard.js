@@ -8,10 +8,11 @@ function ContactCard(props) {
     // console.log(props);
     return (
         <div className="contact-card">
-            <img src={props.imgUrl}/>
-            <h3>{props.name}</h3>
-            <p>Phone: {props.phone}</p>
-            <p>Email: {props.email}</p>
+            //pass down a prop, with an object, with a property
+            <img src={props.contact.imgUrl}/>
+            <h3>{props.contact.name}</h3>
+            <p>Phone: {props.contact}</p>
+            <p>Email: {props.contact}</p>
         </div>
     )
 }
