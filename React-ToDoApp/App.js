@@ -14,7 +14,7 @@ class App extends React.Component {
     constructor() { 
         super()
         this.state = {
-            todos: todosData;
+            todos: todosData
         }   
     }
     render() {
