@@ -39,6 +39,18 @@ class App extends Component {
                     placeholder="Last Name"
                     onChange={this.handleChange}
                 />
+
+                {
+                    /**
+                     * Other useful form elements:
+                     * 
+                     *  <textarea /> element
+                     *  <input type="checkbox" />
+                     *  <input type="radio" />
+                     *  <select> and <option> elements
+                     */
+                }
+                
                 <h1>{this.state.firstName} {this.state.lastName}</h1>
             </form>
 
