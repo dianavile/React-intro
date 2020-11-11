@@ -8,6 +8,11 @@ import React from "react";
 
 //Function App = Table of Contents of Components.
 function ToDoItem(props) {
+    const completedStyle = {
+        fontStyle: "italic",
+        color: "#cdcdcd",
+        textDecoration: "line-through"
+    }
     return (
         //wrap in div, because only can return 1 element at the time.
         <div className="todo-item">
@@ -16,7 +21,8 @@ function ToDoItem(props) {
                 checked={props.item.completed} 
                 onChange={() => props.handleChange(props.item.id)}
             />
-            <p>{props.item.text}</p>
+            //ternary statement
+            <p style={props.item.completed ? completedStyle: null}>{props.item.text}</p>
         </div>
     ) 
 };
