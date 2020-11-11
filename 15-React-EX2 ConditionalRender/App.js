@@ -14,10 +14,35 @@ import React from "react";
     // Conditional Rendering
 */
 
-function App() {
-    return (
+//step 1 & step 2
+class App extends React.Component {
+    constructor() { 
+        super()
+        this.state = {
+            isLoggedIn: false
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        //console.log("I´m working!")
+        this.setState(prevState => {
+            return {
+                isLoggedIn:!prevState.isLoggedIn //to give the opposite of current state
+            }  
+        })
+    }
+    
+    render() {
+        let buttonText = this.state.isLoggedIn ? "LOG OUT" : "LOG IN";
+        let displayText = this.state.isLoggedIn ? "Logged in" : "Logged out";
+        return (
         <div>
-            Code goes here
+                <button onClick={this.handleClick}>{buttonText}</button>
+                <h1>{displayText}</h1>
         </div>
-    )
+        )
+    }
 }
+
+export default App;
