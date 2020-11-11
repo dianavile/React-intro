@@ -11,10 +11,12 @@ function ToDoItem(props) {
     return (
         //wrap in div, because only can return 1 element at the time.
         <div className="todo-item">
-            <input type="checkbox" checked={props.item.completed}
-                onChange={() => console.log("Changed!")}
+            <input 
+                type="checkbox" 
+                checked={props.item.completed} 
+                onChange={() => props.handleChange(props.item.id)}
             />
-             <p>{props.item.text}</p>
+            <p>{props.item.text}</p>
         </div>
     ) 
 };
