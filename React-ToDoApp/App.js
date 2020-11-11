@@ -33,10 +33,17 @@ class App extends React.Component {
       this.setState(prevState => {
             const updatedTodos = prevState.todos.map(todo => {
                 if (todo.id === id) {
-                    todo.completed = !todo.completed;
+                    // todo.completed = !todo.completed; //directly modifies the prevState, not recomendable
+                    //instead; return a new object, flip the property of the new object.
+                    return {
+                        ...todo,
+                        completed: !todo.completed
+                    }
                 }
                 return todo;
             })
+          console.log(prevState.todos);
+          console.log(updatedTodos);
            return {
                 todos: updatedTodos
             }
