@@ -5,7 +5,7 @@ import React from "react";
 //1) the component needs to be CLASS - BASED!
 //2) and you need to add the constructor()method.It initializes parts of this class.
 //3) and add the super()method, this goes along with the constructor()method.
-//4) add property to this.state = object, to access this state anywhere else.
+//4) add property to props.data = object, to access this state anywhere else.
 //props (the other way to pass data, can NOT be changed, props are inmutable!)
 //this.props.something = "some new value" = NOT OKE!
 //more info about classes: // https://scrimba.com/p/p4Mrt9/cQnMDHD
@@ -23,8 +23,8 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>Is state important to know? {this.state.answer}</h1>
-                <ChildComponent answer={this.state.answer}/>
+                <h1>Is state important to know? {props.data.answer}</h1>
+                <ChildComponent answer={props.data.answer}/>
             </div>
         )
     }
