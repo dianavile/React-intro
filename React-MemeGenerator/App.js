@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "./Header";
+import MemeGenerator from "./MemeGenerator";
 
 /**
  * Create 2 new components - Header and MemeGenerator
@@ -9,7 +11,10 @@ import React from "react";
 
 function App() { 
     return (
-     <h1>Hello World!</h1>
+        <div>
+            <Header />
+            <MemeGenerator />
+        </div>
     )   
 }
 
